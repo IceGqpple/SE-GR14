@@ -1,4 +1,4 @@
-package model;
+package model.core;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,15 +12,19 @@ public class Rute {
         this.kjøretøy = kjøretøy;
         this.stoppeSteder = new ArrayList<>();
     }
-    public void addStoppeSted(StoppeSted sted){
+
+    public void addStoppeSteder(StoppeSted sted){
         stoppeSteder.add(sted);
     }
+
     public void removeStoppeSted(StoppeSted sted){
         stoppeSteder.remove(sted);
     }
+
     public List<StoppeSted> getStoppeSteder(){
         return stoppeSteder;
     }
+
     public void setKjøretøy(Kjøretøy kjøretøy){
         this.kjøretøy = kjøretøy;
     }

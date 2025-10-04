@@ -1,4 +1,4 @@
-package model;
+package model.core;
 
 public class Tog extends Kjøretøy {
 

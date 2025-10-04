@@ -1,4 +1,4 @@
-package model;
+package model.core;
 
 public abstract class Kjøretøy {
     private String type;
