@@ -3,7 +3,7 @@ package model.core;
 public class Developer extends User {
 
     public Developer(String fName, String lName){
-        super(fName,lName;
+        super(fName,lName);
     }
 
     public Developer(String fName, String lName, int id){
