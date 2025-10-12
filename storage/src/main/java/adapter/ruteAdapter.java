@@ -18,20 +18,28 @@ public class ruteAdapter {
     public ruteAdapter(Connection connection) {
             this.connection = connection;
     }
-
-    public void DBAddRute(){
+ /*   Under arbeid. 
+    public void DBAddRute(Rute rute){
         try{
-            String sql = "INSERT INTO kjoretoy (kjoretoy_navn) VALUES ('Trikk'); ";
+           int N = rute.stoppeSteder.length;
+
+           for (int i = 0; i<=N; i = i+1){
+
+           }
+            String sql = "INSERT INTO ruter (kjoretoy_navn %s, kjoretoy_id) VALUES ('rute.ruteNavn %s'); ".formatted(rute.kjoretoyNavn, rute.ruteNavn);
 
             Statement statement = connection.createStatement();
             statement.executeUpdate(sql);
+
 
         } catch(
                 SQLException e){
             throw new DatabaseException("Problem with query" + e.getMessage());
         }
-    }
 
+
+    }
+*/
 
 
 
