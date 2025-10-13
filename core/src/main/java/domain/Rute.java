@@ -4,13 +4,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Rute {
-
-    private List<StoppeSted> stoppeSteder;
+    private String name;
+    private ArrayList<StoppeSted> stoppeSteder;
     private Kjøretøy kjøretøy;
 
-    public Rute(Kjøretøy kjøretøy){
+    public Rute(String name, Kjøretøy kjøretøy, ArrayList<String> stoppested){
+        this.name = name;
         this.kjøretøy = kjøretøy;
-        this.stoppeSteder = new ArrayList<>();
+        ArrayList<StoppeSted> data = new ArrayList<StoppeSted>();
+        for(String stopp : stoppested){
+            data.add(new StoppeSted(stopp));
+        }
+        this.stoppeSteder = data;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void addStoppeSteder(StoppeSted sted){

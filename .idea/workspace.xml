@@ -5,24 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e7f753a-8470-492c-b08b-18e7da05fee5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/MockData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/core/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/domain/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/core/Bruker.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/domain/Bruker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/core/Buss.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/domain/Buss.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/core/Båt.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/domain/Båt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/core/Developer.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/domain/Developer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/core/Kjøretøy.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/domain/Kjøretøy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/core/Reise.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/domain/Reise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/core/Rute.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/domain/Rute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/core/StoppeSted.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/domain/StoppeSted.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/core/Taxi.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/domain/Taxi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/core/Tog.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/domain/Tog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/core/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/domain/Developer.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/domain/Developer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/domain/Rute.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/domain/Rute.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,21 +48,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop__api__backend&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/47940/Desktop/SE Software Engineering/Github/SE-GR14/storage/src/main/java/org/musicas/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "develop__api__backend",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "C:/Users/47940/Desktop/SE Software Engineering/Github/SE-GR14/storage/src/main/java/org/musicas/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hallo\Documents\GitHub\SE-GR14\core\src\main\java\domain" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="SE-GR14" />
