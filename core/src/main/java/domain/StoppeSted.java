@@ -1,4 +1,4 @@
-package model.core;
+package domain;
 
 public class StoppeSted {
     private String name;

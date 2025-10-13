@@ -1,4 +1,4 @@
-package model.core;
+package domain;
 
 public abstract class Kjøretøy {
     private String type;

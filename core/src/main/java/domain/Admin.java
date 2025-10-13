@@ -1,4 +1,4 @@
-package model.core;
+package domain;
 
 public class Admin extends User {
 
