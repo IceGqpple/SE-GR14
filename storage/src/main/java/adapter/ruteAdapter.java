@@ -20,6 +20,7 @@ public class ruteAdapter {
     }
 
     //Funksjon til å hente ut ruter fra db basert på navnet på ruten.
+    /*
     public Rute hentRute(String ruteNavn) {
         Rute rute;
         ArrayList<String> stoppested = new ArrayList<>();
@@ -49,7 +50,7 @@ public class ruteAdapter {
         }
     return rute;
     }
-
+*/
 
 
 
