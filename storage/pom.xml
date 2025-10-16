@@ -9,11 +9,19 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <dependencies>
+
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
             <version>9.4.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.musicas</groupId>
+            <artifactId>core</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
     <artifactId>storage</artifactId>
 
