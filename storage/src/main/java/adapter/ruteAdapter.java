@@ -19,39 +19,53 @@ public class ruteAdapter {
         this.connection = connection;
     }
 
-    //Funksjon til å hente ut ruter fra db basert på navnet på ruten.
+
+
+
+
+
     /*
-    public Rute hentRute(String ruteNavn) {
+    public ArrayList<Rute> hentRuter() {
         Rute rute;
-        ArrayList<String> stoppested = new ArrayList<>();
+        ArrayList<Rute> ruter = new ArrayList<>();
+
         Kjøretøy kjoretoy;
         try {
             DBKey key = new DBKey();
-            Database database = new Database (key);
+            Database database = new Database(key);
             Connection connection = database.startDatabase();
             Statement statement = connection.createStatement();
 
 
-            ResultSet result = statement.executeQuery(String.format("SELECT kjoretoy_navn, sted_navn \n" +
-                    "\tfrom rute_view \n" +
-                    "    where rute_navn = '%s' ", ruteNavn));
 
 
-            while(result.next()){
-                stoppested.add(result.getString(2));
+                ResultSet ruteNavn = statement.executeQuery("SELECT rute_navn, kjoretoy_id from rute");
+
+                while (ruteNavn.next()) {
+                    String navn = ruteNavn.getString(1);
+                    ArrayList<StoppeSted> tempSteder = new ArrayList<>();
+                    ResultSet setRute = statement.executeQuery(String.format("SELECT sted_navn, kjoretoy_navn from rute_view where rute_navn = '%s'", navn));
+                    while (setRute.next()) {
+                        StoppeSted stoppeSted = new StoppeSted(setRute.getString(1));
+                        tempSteder.add(stoppeSted);
+                    }
+                    if (setRute.getString(2) == "Buss") {
+                        kjoretoy = Kjøretøy("Buss");
+                    } else {
+                        kjoretoy = Kjøretøy("Tog");
+                    }
+                    rute = new Rute(navn, kjoretoy, tempSteder);
+                }
+
+
+                database.quitDB();
+            } catch (SQLException e) {
+                throw new DatabaseException("Problem with query" + e.getMessage());
             }
-            String type = result.getString(1);
-            kjoretoy = new Kjøretøy(type);
-            rute = new Rute(ruteNavn, kjoretoy , stoppested);
-
-            database.quitDB();
-        } catch (SQLException e) {
-            throw new DatabaseException("Problem with query" + e.getMessage());
+            return ruter;
         }
-    return rute;
-    }
-*/
-
+        
+     */
 
 
     //Denne funksjonen tar imot 2 stoppesteder som parametere for å hente ut rutenavn i en liste.
