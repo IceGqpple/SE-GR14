@@ -1,10 +1,12 @@
 package model.app;
 
-import model.core.*;
+import model.core.model.Buss;
+import model.core.model.Rute;
+import model.core.model.StoppeSted;
+import model.core.model.Tog;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 
 public class mockData {
     public ArrayList<StoppeSted> createMockStoppeSted(){

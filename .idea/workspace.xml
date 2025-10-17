@@ -4,7 +4,62 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e7f753a-8470-492c-b08b-18e7da05fee5" name="Changes" comment="" />
+    <list default="true" id="3e7f753a-8470-492c-b08b-18e7da05fee5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/Gruppe14/app/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/Gruppe14/app/MockData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/dto/BrukerResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/dto/BrukerResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/dto/CreateUserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/dto/CreateUserRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/dto/OpprettRuteRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/dto/OpprettRuteRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/dto/ReiseResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/dto/ReiseResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/dto/RuteResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/dto/RuteResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/dto/StoppeSted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/dto/StoppeSted.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/dto/SøkReiseRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/dto/SøkReiseRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/exception/BrukerRepositoryException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/exception/BrukerRepositoryException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/exception/ReiseRepositoryException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/exception/ReiseRepositoryException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/exception/RuteRepositoryException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/exception/RuteRepositoryException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/model/Admin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/model/Bruker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/model/Buss.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/model/Båt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/model/Developer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/model/Reise.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/model/Rute.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/model/StoppSted.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/model/Taxi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/model/Tog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/model/Vehicle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/port/BrukerRepositoryPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/port/BrukerRepositoryPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/port/ReiseRepositoryPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/port/ReiseRepositoryPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/port/RuteRepositoryPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/port/RuteRepositoryPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/service/BrukerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/service/BrukerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/service/ReiseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/service/ReiseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/Gruppe14/core/service/RuteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/service/RuteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/app/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/app/mockData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/app/mockData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/core/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/model/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/core/Bruker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/model/Bruker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/core/Buss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/model/Buss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/core/Båt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/model/Båt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/core/Developer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/model/Developer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/core/Kjøretøy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/model/Kjøretøy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/core/Reise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/model/Reise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/core/Rute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/model/Rute.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/core/StoppeSted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/model/StoppeSted.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/core/Taxi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/model/Taxi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/core/Tog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/model/Tog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/core/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/core/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/src/main/java/org/Gruppe14/storage/adapter/RuteAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/src/main/java/org/Gruppe14/storage/database/Database.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/src/main/java/org/Gruppe14/storage/exceptions/DatabaseException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/src/main/java/org/Gruppe14/storage/exceptions/RuteAdapterException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/src/main/java/org/Gruppe14/storage/runDB/Main.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,14 +96,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.App.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop__backend&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Bruker\OneDrive\Desktop\Gruppe14\src\main\java\model\core\dto" />
+      <recent name="C:\Users\Bruker\OneDrive\Desktop\Gruppe14\src\main\java\model\core\service" />
+      <recent name="C:\Users\Bruker\OneDrive\Desktop\Gruppe14\src\main\java\model\core\port" />
+      <recent name="C:\Users\Bruker\OneDrive\Desktop\Gruppe14\src\main\java\model\core\exception" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="SE-GR14" />

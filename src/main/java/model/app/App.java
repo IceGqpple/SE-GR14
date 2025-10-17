@@ -1,7 +1,7 @@
 package model.app;
 
-import model.core.Rute;
-import model.core.StoppeSted;
+import model.core.model.Rute;
+import model.core.model.StoppeSted;
 
 import java.util.ArrayList;
 
