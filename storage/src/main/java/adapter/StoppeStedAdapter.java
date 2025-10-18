@@ -13,25 +13,29 @@ import java.util.ArrayList;
 
 public class StoppeStedAdapter {
 
+
+    private Connection connection;
+
+    public StoppeStedAdapter(Connection connection) {
+        this.connection = connection;
+    }
+
+
+
     //Når denne blir kallt så får du en liste med StoppestedObjekter
     public ArrayList<StoppeSted> hentStoppeSted(){
         ArrayList<String> temp = new ArrayList<>();
         ArrayList<StoppeSted> stoppeSteder = new ArrayList<>();
 
         try{
-
-            DBKey key = new DBKey();
-            Database database = new Database (key);
-            Connection connection = database.startDatabase();
             Statement statement = connection.createStatement();
-
             ResultSet stedNavn = statement.executeQuery(String.format("SELECT rute_navn FROM stoppested"));
             while(stedNavn.next()){
                 String navn = stedNavn.getString(1);
                 StoppeSted nyttStoppeSted = new StoppeSted(String.format("%s", navn));
                 stoppeSteder.add(nyttStoppeSted);
             }
-            database.quitDB();
+
 
         } catch(SQLException e){
             throw new DatabaseException("Problem with query" + e.getMessage());
