@@ -1,19 +1,24 @@
 package app;
 
+import domain.MockData;
+import domain.ReiseSok;
 import domain.Rute;
 import domain.StoppeSted;
 
 import java.util.ArrayList;
 
 public class App {
+    // public variabler for alle stoppesteder og ruter
+    public static ArrayList<StoppeSted> stoppeStedList = new MockData().getStoppeSteder();
+    public static ArrayList<Rute> ruteList = new MockData().getRuteList();
+
     public static void main(String[] args) {
-        ArrayList<StoppeSted> stoppeStedList = new MockData().createMockStoppeSted();
+        /*
         System.out.println("Stoppesteder: ");
         for(StoppeSted stoppeSted : stoppeStedList){
             System.out.print(stoppeSted.getName() + ", ");
         }
         System.out.println("\n");
-        ArrayList<Rute> ruteList = new MockData().createMockRute();
 
         System.out.println("Ruter: ");
         for(Rute rute : ruteList){
@@ -22,6 +27,7 @@ public class App {
                 System.out.print(stoppeSted.getName() + ", ");
             }
             System.out.println();
-        }
+       }*/
+        ReiseSok test = new ReiseSok(new StoppeSted("Rakkestad"), new StoppeSted("Sarpsborg"));
     }
 }

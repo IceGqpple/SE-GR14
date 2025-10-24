@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e7f753a-8470-492c-b08b-18e7da05fee5" name="Changes" comment="" />
+    <list default="true" id="3e7f753a-8470-492c-b08b-18e7da05fee5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/domain/MockData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/domain/Overgang.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/domain/ReiseSok.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/MockData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/domain/Admin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/domain/Bruker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/domain/Båt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/domain/Developer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/domain/Reise.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/domain/Reise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/domain/Rute.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/domain/Rute.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/domain/Taxi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/domain/User.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,7 +45,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/IceGqpple/SE-GR14.git&quot;,
-    &quot;accountId&quot;: &quot;a1182918-3fd4-41e3-855b-7626c792d68b&quot;
+    &quot;accountId&quot;: &quot;8fdc7fb3-51be-4f30-8c78-b6b3a7aa200a&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
@@ -83,13 +98,6 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26830.84" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

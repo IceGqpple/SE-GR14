@@ -5,37 +5,51 @@ import java.util.List;
 
 
 public class Reise {
-    private List<Rute> ruter;
-    private StoppeSted startSted;
-    private StoppeSted sluttSted;
+    private ArrayList<Rute> ruter;
+    private ArrayList<StoppeSted> stoppesteder;
+    private ArrayList<Overgang> overganger;
+    private int antallstop;
 
-    public Reise(StoppeSted startSted, StoppeSted sluttSted) {
-        this.startSted = startSted;
-        this.sluttSted = sluttSted;
-        this.ruter = new ArrayList<>();
+    public Reise(ArrayList<Rute> ruter, ArrayList<StoppeSted> stoppesteder, ArrayList<Overgang> overganger) {
+        this.ruter = ruter;
+        this.stoppesteder = stoppesteder;
+        this.overganger = overganger;
+        this.antallstop = stoppesteder.size();
     }
 
-    public void addRute(Rute rute) {
+    public Reise(Rute rute, ArrayList<StoppeSted> stoppesteder, ArrayList<Overgang> overganger) {
+        ArrayList<Rute> ruter = new ArrayList<Rute>();
+        ruter.add(rute);
+        this.stoppesteder = stoppesteder;
+        this.overganger = overganger;
+        this.antallstop = stoppesteder.size();
+    }
+
+    public ArrayList<Rute> getRuter() {
+        return ruter;
+    }
+    public ArrayList<StoppeSted> getStoppesteder() {return stoppesteder;}
+
+    public ArrayList<Overgang> getOverganger(){return overganger;}
+
+    public void addRute(Rute rute){
         ruter.add(rute);
     }
 
-    public StoppeSted getStartSted() {
-        return startSted;
+    public void addStoppested(StoppeSted stoppeSted){
+        stoppesteder.add(stoppeSted);
+        antallstop = stoppesteder.size();
     }
 
-    public void setStartSted(StoppeSted startSted) {
-        this.startSted = startSted;
+    public void addOvergang(Overgang overgang){overganger.add(overgang);}
+
+    public int getAntallstop() {return antallstop;}
+
+    public void printReise(){
+        System.out.println();
     }
 
-    public StoppeSted getSluttSted() {
-        return sluttSted;
-    }
 
-    public void setSluttSted(StoppeSted sluttSted) {
-        this.sluttSted = sluttSted;
-    }
 
-    public List<Rute> getRuter() {
-        return ruter;
-    }
+
 }

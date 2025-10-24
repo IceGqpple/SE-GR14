@@ -18,6 +18,11 @@ public class Rute {
         this.stoppeSteder = data;
     }
 
+    public Rute(String name){
+        this.name = name;
+        stoppeSteder = new ArrayList<StoppeSted>();
+    }
+
     public void setName(String name) {
         this.name = name;
     }
