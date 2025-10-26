@@ -18,7 +18,7 @@ public class Reise {
     }
 
     public Reise(Rute rute, ArrayList<StoppeSted> stoppesteder, ArrayList<Overgang> overganger) {
-        ArrayList<Rute> ruter = new ArrayList<Rute>();
+        ruter = new ArrayList<Rute>();
         ruter.add(rute);
         this.stoppesteder = stoppesteder;
         this.overganger = overganger;
@@ -46,6 +46,14 @@ public class Reise {
     public int getAntallstop() {return antallstop;}
 
     public void printReise(){
+        System.out.print("Ruter: ");
+        for(Rute rute : ruter){
+            System.out.print(rute.getName() + ", ");
+        }
+        System.out.print("\nStoppe steder: ");
+        for(StoppeSted stop : stoppesteder){
+            System.out.print(stop.getName() + ", ");
+        }
         System.out.println();
     }
 

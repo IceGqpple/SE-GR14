@@ -23,6 +23,16 @@ public class Rute {
         stoppeSteder = new ArrayList<StoppeSted>();
     }
 
+    // hjelpe funksjon for å finne stoppested og index i Rute
+    public int finnStoppeSted(String name){
+        for(StoppeSted stop : stoppeSteder){
+            if(stop.getName().equals(name)) {
+                return stoppeSteder.indexOf(stop);
+            }
+        }
+        return -1;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -51,3 +61,6 @@ public class Rute {
         return kjøretøy;
     }
 }
+
+
+

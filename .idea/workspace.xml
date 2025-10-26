@@ -5,20 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e7f753a-8470-492c-b08b-18e7da05fee5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/domain/MockData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/domain/Overgang.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/domain/ReiseSok.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/MockData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/domain/Admin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/domain/Bruker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/domain/Båt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/domain/Developer.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/domain/Reise.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/domain/Reise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/domain/ReiseSok.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/domain/ReiseSok.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/domain/Rute.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/domain/Rute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/domain/Taxi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/domain/User.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,5 +99,15 @@
       <updated>1760191721508</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint type="java-exception">
+          <properties class="java.util.ConcurrentModificationException" package="java.util" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
