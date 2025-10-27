@@ -10,19 +10,26 @@ public class RuteAdapter {
 
 
 
-    private Connection connection;
-
-    public RuteAdapter(Connection connection) {
-        this.connection = connection;
-    }
 
 
+        /** Henter en liste over alle tilgjengelige ruter fra databasen.
+         *
+         * Metoden har innebygd database tilkobling og kutting
+         * Dette gjør funksjonen noe trengere, men også enklere å kalle
+         *
+         *
+         * Metoden finner først alle rutenavn, og slår deretter opp
+         * stoppestedene og kjøretøyet (Buss eller Tog) for hver enkelt rute.
+         *
+         * Metoden returnerer en ArrayList som inneholder ruteobjekter
+         *
+         * */
 
+    public static ArrayList<Rute> hentAlleRuter() {
+        DBKey key = new DBKey();
+        Database database = new Database (key);
+        Connection connection = database.startDatabase();
 
-
-
-    //Denne funksjonen returnerer en liste med ruter
-    public ArrayList<Rute> hentRuter() {
         Rute rute;
         ArrayList<Rute> ruter = new ArrayList<>();
         ArrayList<String> navnRute = new ArrayList<>();
@@ -39,6 +46,7 @@ public class RuteAdapter {
 
             }
         } catch (SQLException e) {
+            database.quitDB();
             throw new DatabaseException("Problem with first query" + e.getMessage());
         }
 
@@ -71,14 +79,15 @@ public class RuteAdapter {
                 rute = new Rute(ruteNavn, kjoretoy, tempSteder);
                 ruter.add(rute);
             } catch (SQLException e) {
+                database.quitDB();
                 throw new DatabaseException("Problem with second query" + e.getMessage());
+
             }
             i++;
         }
 
 
-
-
+        database.quitDB();
         return ruter;
     }
 
