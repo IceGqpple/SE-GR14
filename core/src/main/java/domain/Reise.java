@@ -46,6 +46,7 @@ public class Reise {
     public int getAntallstop() {return antallstop;}
 
     public void printReise(){
+        System.out.print("Reise: " + stoppesteder.getFirst().getName() + " - " + stoppesteder.getLast().getName() + "\n");
         System.out.print("Ruter: ");
         for(Rute rute : ruter){
             System.out.print(rute.getName() + ", ");

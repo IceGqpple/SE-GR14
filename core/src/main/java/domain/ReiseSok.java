@@ -14,7 +14,6 @@ public class ReiseSok {
 
         ArrayList<Rute> startReiseRute = new ArrayList<Rute>();
         ArrayList<Rute> stoppReiseRute = new ArrayList<Rute>();
-        ArrayList<Rute> test = new ArrayList<Rute>();
         ArrayList<Rute> ruteList = new MockData().getRuteList();
         for (Rute rute : ruteList) {
             boolean stopreise_not_first = true;
@@ -48,28 +47,33 @@ public class ReiseSok {
             for(Rute startrute : startReiseRute){
                 for(Rute stopprute : stoppReiseRute){
                     for(StoppeSted stop : startrute.getStoppeSteder() ){
-                        if((stopprute.finnStoppeSted(stop.getName()) >= 0)&& !(test.contains(stopprute))){
-                            test.add(stopprute);
-                        }
-
-
-                        /*for(StoppeSted stopprutestopp : stopprute.getStoppeSteder()){
-                            if(startrutestopp.getName().equals(stopprutestopp.getName()) && !(test.contains(stopprute))){
-                                test.add(stopprute);
+                        if((stopprute.finnStoppeSted(stop.getName()) >= 0)){
+                            if(startrute.finnStoppeSted(startreise.getName()) < startrute.finnStoppeSted(stop.getName())){
+                                if(stopprute.finnStoppeSted(stoppreise.getName()) > stopprute.finnStoppeSted(stop.getName())) {
+                                    ArrayList<StoppeSted> tempstopreise = new ArrayList<StoppeSted>();
+                                    ArrayList<Overgang> tempoverganger = new ArrayList<Overgang>();
+                                    tempoverganger.add(new Overgang(stop, startrute, stopprute));
+                                    ArrayList<Rute> tempreiseruter = new ArrayList<Rute>();
+                                    tempreiseruter.add(startrute);
+                                    tempreiseruter.add(stopprute);
+                                    for (int i = startrute.finnStoppeSted(startreise.getName()); i <= startrute.finnStoppeSted(stop.getName()); i++) {
+                                        tempstopreise.add(startrute.getStoppeSteder().get(i));
+                                    }
+                                    for (int i = 1 + stopprute.finnStoppeSted(stop.getName()); i <= stopprute.finnStoppeSted(stoppreise.getName()); i++) {
+                                        tempstopreise.add(stopprute.getStoppeSteder().get(i));
+                                    }
+                                    reiser.add(new Reise(tempreiseruter, tempstopreise, tempoverganger));
+                                }
                             }
-                        }*/
+                        }
                     }
                 }
             }
         }
 
-        for (Rute rute : test) {
-            System.out.println(rute.getName());
-        }
-
-        /*for (Reise reise : reiser){
+        for (Reise reise : reiser){
             reise.printReise();
-        }
+        }/*
         for (Rute rute : startReiseRute) {
             System.out.println(rute.getName());
         }
