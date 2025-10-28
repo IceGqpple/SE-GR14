@@ -23,6 +23,7 @@ public class RuteAdapter {
          *
          * Metoden returnerer en ArrayList som inneholder ruteobjekter
          *
+         * @return sender en liste med rute objekter.
          * */
 
     public static ArrayList<Rute> hentAlleRuter() {
@@ -32,17 +33,17 @@ public class RuteAdapter {
 
         Rute rute;
         ArrayList<Rute> ruter = new ArrayList<>();
-        ArrayList<String> navnRute = new ArrayList<>();
+        ArrayList<String> RuteNavnListe = new ArrayList<>();
 
 
         //Funksjonen er satt opp slik i to try catch blokker. Den første blokken henter navnene på rutene blir hentet ut
         try {
-            Statement statement = connection.createStatement();
-            ResultSet ruteNavn = statement.executeQuery("SELECT rute_navn from rute");
+            Statement DBSporring = connection.createStatement();
+            ResultSet RuteNavnFraDB = DBSporring.executeQuery("SELECT rute_navn from rute");
 
-            while (ruteNavn.next()) {
-                String navn = ruteNavn.getString(1);
-                navnRute.add(navn);
+            while (RuteNavnFraDB.next()) {
+                String RuteNavnTilListe = RuteNavnFraDB.getString(1);
+                RuteNavnListe.add(RuteNavnTilListe);
 
             }
         } catch (SQLException e) {
@@ -52,22 +53,24 @@ public class RuteAdapter {
 
         //I den andre blokken brukes navnene på rutene til å hente ut å lage nye spørringer for å hente data til å konstruere rutene.
         int i = 0;
-        while(i < navnRute.size()){
+        while(i < RuteNavnListe.size()){
             try {
-                Statement statement = connection.createStatement();
-                String ruteNavn = navnRute.get(i);
-                ArrayList<String> tempSteder = new ArrayList<>();
+                Statement DBSporring = connection.createStatement();
+                String RuteNavnTilSporring = RuteNavnListe.get(i);
+                ArrayList<String> StedsNavnTilRute = new ArrayList<>();
                 Kjøretøy kjoretoy = null;
+
                 //Her så lages det en spørring for hver rute
-                ResultSet view_rute = statement.executeQuery(String.format("SELECT rute_navn, kjoretoy_navn, sted_navn from rute_view where rute_navn = '%s' ", ruteNavn));
-                while(view_rute.next()){
+                ResultSet ResultatFraSporringView = DBSporring.executeQuery(String.format("SELECT rute_navn, kjoretoy_navn, sted_navn from rute_view where rute_navn = '%s' ", RuteNavnTilSporring));
+
+                while(ResultatFraSporringView.next()){
 
                     //Her legges stoppestedene inn i en ArrayList som blir gitt som parameter til konstruktøren
-                    tempSteder.add(view_rute.getString(3));
+                    StedsNavnTilRute.add(ResultatFraSporringView.getString(3));
 
                     //Her hentes kjøretøy typen
                     if(kjoretoy == null){
-                        if("Buss".equals(view_rute.getString(2))){
+                        if("Buss".equals(ResultatFraSporringView.getString(2))){
                             kjoretoy = new Buss("Buss");
                         } else{
                             kjoretoy = new Tog("Tog");
@@ -76,7 +79,7 @@ public class RuteAdapter {
 
                 }
                 //Her blir den nye ruten konstruert og lagt inn i listen som blir returnert.
-                rute = new Rute(ruteNavn, kjoretoy, tempSteder);
+                rute = new Rute(RuteNavnTilSporring, kjoretoy, StedsNavnTilRute);
                 ruter.add(rute);
             } catch (SQLException e) {
                 database.quitDB();
@@ -125,6 +128,7 @@ public class RuteAdapter {
             database.quitDB();
 
         } catch(SQLException e){
+
             throw new DatabaseException("Problem with query" + e.getMessage());
         }
 

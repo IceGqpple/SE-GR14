@@ -14,7 +14,13 @@ import java.util.ArrayList;
 public class StoppeStedAdapter {
 
 
-
+    /**
+     *  Henter alle stoppesteder i databasen
+     *
+     *  Kobler til databasen, og utfører spørring.
+     *
+     * @return sender en liste med stoppested objekter
+     */
 
 
     //Når denne blir kallt så får du en liste med Stoppested objekter
@@ -23,15 +29,16 @@ public class StoppeStedAdapter {
         Database database = new Database (key);
         Connection connection = database.startDatabase();
 
-        ArrayList<String> temp = new ArrayList<>();
+
         ArrayList<StoppeSted> stoppeSteder = new ArrayList<>();
 
         try{
-            Statement statement = connection.createStatement();
-            ResultSet stedNavn = statement.executeQuery(String.format("SELECT sted_navn FROM stoppested"));
-            while(stedNavn.next()){
-                String navn = stedNavn.getString(1);
-                StoppeSted nyttStoppeSted = new StoppeSted(String.format("%s", navn));
+            Statement DBsporring = connection.createStatement();
+            ResultSet stedNavnFraDB = DBsporring.executeQuery(String.format("SELECT sted_navn FROM stoppested"));
+
+            while(stedNavnFraDB.next()){
+                String stedNavnTilObjekt = stedNavnFraDB.getString(1);
+                StoppeSted nyttStoppeSted = new StoppeSted(String.format("%s", stedNavnTilObjekt));
                 stoppeSteder.add(nyttStoppeSted);
             }
 
