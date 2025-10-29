@@ -34,4 +34,8 @@ public class Overgang {
     public void setRuteUt(Rute ruteUt) {
         this.ruteUt = ruteUt;
     }
+
+    public void printOvergang(){
+        System.out.print("Overgang: " + getOvergang().getName() + "Rute inn: " + getRuteInn().getName() + "Rute ut: " + getRuteUt().getName());
+    }
 }

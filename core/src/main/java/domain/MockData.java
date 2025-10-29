@@ -15,15 +15,16 @@ public class MockData {
         stoppeSteder.add(new StoppeSted("Sarpsborg"));
         stoppeSteder.add(new StoppeSted("Fredrikstad"));
         stoppeSteder.add(new StoppeSted("Rakkestad"));
-        stoppeSteder.add(new StoppeSted("Kornsjø"));
+        //stoppeSteder.add(new StoppeSted("Kornsjø"));
         stoppeSteder.add(new StoppeSted("Rygge"));
         stoppeSteder.add(new StoppeSted("Remmen"));
         stoppeSteder.add(new StoppeSted("Greåker"));
         stoppeSteder.add(new StoppeSted("Østfoldhallen"));
         stoppeSteder.add(new StoppeSted("Borgenhaugen"));
         stoppeSteder.add(new StoppeSted("Rudsskogen"));
-        stoppeSteder.add(new StoppeSted("Festningen"));
-        stoppeSteder.add(new StoppeSted("Prestebakke"));
+        //stoppeSteder.add(new StoppeSted("Festningen"));
+        //stoppeSteder.add(new StoppeSted("Prestebakke"));
+        //stoppeSteder.add(new StoppeSted("Bakke"));
         stoppeSteder.add(new StoppeSted("Råde"));
         stoppeSteder.add(new StoppeSted("Svinesundparken"));
         stoppeSteder.add(new StoppeSted("Saltnes"));
@@ -48,8 +49,8 @@ public class MockData {
         ruteList.add(new Rute("Fredrikstad-Sarpsborg", new Buss("Buss"), new ArrayList<>(Arrays.asList("Fredrikstad", "Østfoldhallen", "Greåker", "Sarpsborg"))));
         ruteList.add(new Rute("Sarpsborg-Rakkestad", new Buss("Buss"), new ArrayList<>(Arrays.asList("Sarpsborg", "Borgenhaugen", "Ise", "Rudsskogen", "Rakkestad"))));
         ruteList.add(new Rute("Rakkestad-Sarpsborg", new Buss("Buss"), new ArrayList<>(Arrays.asList("Rakkestad", "Rudsskogen", "Ise", "Borgenhaugen", "Sarpsborg"))));
-        ruteList.add(new Rute("Halden-Kornsjø", new Buss("Buss"), new ArrayList<>(Arrays.asList("Halden", "Festningen", "Bakke", "Prestebakke", "Kornsjø"))));
-        ruteList.add(new Rute("Kornsjø-Halden", new Buss("Buss"), new ArrayList<>(Arrays.asList("Kornsjø","Prestebakke", "Bakke", "Frestningen", "Halden"))));
+        //ruteList.add(new Rute("Halden-Kornsjø", new Buss("Buss"), new ArrayList<>(Arrays.asList("Halden", "Festningen", "Bakke", "Prestebakke", "Kornsjø"))));
+        //ruteList.add(new Rute("Kornsjø-Halden", new Buss("Buss"), new ArrayList<>(Arrays.asList("Kornsjø","Prestebakke", "Bakke", "Frestningen", "Halden"))));
     }
 
     public ArrayList<Rute> getRuteList() {

@@ -56,6 +56,16 @@ public class Reise {
             System.out.print(stop.getName() + ", ");
         }
         System.out.println();
+        if(overganger.isEmpty()){
+            System.out.println("Overgang: Ingen");
+        } else {
+            for(Overgang overgang : overganger){
+                overgang.printOvergang();
+                System.out.println();
+            }
+        }
+        System.out.println("Antall stop: " + getAntallstop() + "\n");
+
     }
 
 
