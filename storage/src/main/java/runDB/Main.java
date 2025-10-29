@@ -21,11 +21,8 @@ public class Main {
         System.out.println("\nRuter\n");
         ArrayList<Rute> ruter = RuteAdapter.hentAlleRuter();
         for(Rute rute : ruter){
-            System.out.println(rute.getName());
-            List<StoppeSted> stoppeSteder = rute.getStoppeSteder();
-            for(StoppeSted stoppeSted : stoppeSteder){
-                System.out.println("  " + stoppeSted.getName());
-            }
+            rute.printRute();
+            System.out.println("\n");
         }
 
     }

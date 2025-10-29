@@ -60,6 +60,13 @@ public class Rute {
     public Kjøretøy getKjøretøy() {
         return kjøretøy;
     }
+
+    public void printRute(){
+        System.out.println("Rute: " + getName() + "Stoppesteder: ");
+        for(StoppeSted stop : stoppeSteder){
+            System.out.println(stop.getName() + ", ");
+        }
+    }
 }
 
 
