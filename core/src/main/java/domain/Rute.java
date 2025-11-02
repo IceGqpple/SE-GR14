@@ -62,9 +62,9 @@ public class Rute {
     }
 
     public void printRute(){
-        System.out.println("Rute: " + getName() + "Stoppesteder: ");
+        System.out.print("Rute: " + getName() + "\nStoppesteder: ");
         for(StoppeSted stop : stoppeSteder){
-            System.out.println(stop.getName() + ", ");
+            System.out.print(stop.getName() + ", ");
         }
     }
 }
