@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        //Test hente ut
+        ///Test hente ut
          ArrayList<StoppeSted> stoppeStederv = StoppeStedAdapter.hentAlleStoppeSteder();
         System.out.println("\nStoppesteder\n");
          for(StoppeSted stoppeSted : stoppeStederv){
@@ -27,6 +27,8 @@ public class Main {
                 System.out.println("  " + stoppeSted.getName());
             }
         }
+
+
 
     }
 }

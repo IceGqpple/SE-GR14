@@ -8,6 +8,14 @@
         <artifactId>gruppe14</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+
+    <artifactId>frontend_api</artifactId>
+
+    <properties>
+        <maven.compiler.source>22</maven.compiler.source>
+        <maven.compiler.target>22</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>org.musicas</groupId>
@@ -16,23 +24,15 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>org.musicas</groupId>
-            <artifactId>core</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.20.1</version>
         </dependency>
         <dependency>
-            <groupId>org.musicas</groupId>
-            <artifactId>frontend_api</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
+            <groupId>io.javalin</groupId>
+            <artifactId>javalin-bundle</artifactId>
+            <version>6.7.0</version>
         </dependency>
     </dependencies>
-    <artifactId>app</artifactId>
 
-    <properties>
-        <maven.compiler.source>22</maven.compiler.source>
-        <maven.compiler.target>22</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 </project>

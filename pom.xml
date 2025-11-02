@@ -12,6 +12,7 @@
         <module>storage</module>
         <module>app</module>
         <module>core</module>
+        <module>frontend_api</module>
     </modules>
 
     <properties>

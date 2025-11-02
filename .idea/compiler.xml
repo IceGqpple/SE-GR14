@@ -9,6 +9,7 @@
         <module name="app" />
         <module name="storage (1)" />
         <module name="core" />
+        <module name="frontend_api" />
         <module name="storage" />
       </profile>
     </annotationProcessing>
