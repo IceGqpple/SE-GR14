@@ -4,6 +4,7 @@ import database.DBKey;
 import database.Database;
 import domain.StoppeSted;
 import exceptions.DatabaseException;
+import port.StoppeStedPort;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -11,9 +12,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-public class StoppeStedAdapter {
-
-
+public class SqlStoppeStedAdapter implements StoppeStedPort {
+    public SqlStoppeStedAdapter(){}
     /**
      *  Henter alle stoppesteder i databasen
      *
@@ -24,7 +24,8 @@ public class StoppeStedAdapter {
 
 
     //Når denne blir kallt så får du en liste med Stoppested objekter
-    public static ArrayList<StoppeSted> hentAlleStoppeSteder(){
+    @Override
+    public ArrayList<StoppeSted> hentAlleStoppeSteder(){
         DBKey key = new DBKey();
         Database database = new Database (key);
         Connection connection = database.startDatabase();

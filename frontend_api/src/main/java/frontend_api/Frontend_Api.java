@@ -1,5 +1,9 @@
 package frontend_api;
 
+import Service.RuteService;
+import Service.StoppeStedService;
+import adapter.SqlRuteAdapter;
+import adapter.SqlStoppeStedAdapter;
 import domain.MockData;
 import domain.ReiseSok;
 import domain.StoppeSted;
@@ -23,11 +27,13 @@ public class Frontend_Api {
     }
 
     public static void getStoppeSteder(Context context){
-        context.json(data.getStoppeSteder());
+        StoppeStedService stoppeSted = new StoppeStedService(new SqlStoppeStedAdapter());
+        context.json(stoppeSted.hentStoppeSted());
     }
 
     public static void getReiser(Context context) {
-        ReiseSok reiseSok = new ReiseSok(new StoppeSted(context.queryParam("start")),new StoppeSted(context.queryParam("stopp")));
+        RuteService ruter = new RuteService(new SqlRuteAdapter());
+        ReiseSok reiseSok = new ReiseSok(new StoppeSted(context.queryParam("start")),new StoppeSted(context.queryParam("stopp")), ruter.hentRuter());
         context.json(reiseSok.getReiser());
     }
 

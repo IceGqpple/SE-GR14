@@ -1,5 +1,7 @@
 package domain;
 
+import Service.RuteService;
+
 import java.util.ArrayList;
 
 public class ReiseSok {
@@ -7,13 +9,16 @@ public class ReiseSok {
     private StoppeSted stoppreise;
     private ArrayList<Reise> reiser;
 
-    public ReiseSok(StoppeSted startreise_input, StoppeSted stoppreise_input) {
+    public ReiseSok(StoppeSted startreise_input, StoppeSted stoppreise_input, ArrayList<Rute> ruteList) {
         this.startreise = startreise_input;
         this.stoppreise = stoppreise_input;
         reiser = new ArrayList<Reise>();
 
         // Initialisering av variable for å hente inn ruteliste for rutesøk
-        ArrayList<Rute> ruteList = new MockData().getRuteList();
+
+        //ArrayList<Rute> ruteList = new RuteService(new SqlRuteAdapter()).hentRuter();
+        //ArrayList<Rute> ruteList = new MockData().getRuteList();
+
 
         ArrayList<Rute> startReiseRute = new ArrayList<Rute>();
         ArrayList<Rute> stoppReiseRute = new ArrayList<Rute>();

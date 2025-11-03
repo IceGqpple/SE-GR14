@@ -13,8 +13,5 @@
         <module name="storage" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="frontend_api" target="22" />
-    </bytecodeTargetLevel>
   </component>
 </project>

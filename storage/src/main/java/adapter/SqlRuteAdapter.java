@@ -3,15 +3,13 @@ import database.Database;
 import database.DBKey;
 import domain.*;
 import exceptions.DatabaseException;
+import port.RuterPort;
+
 import java.sql.*;
 import java.util.ArrayList;
 
-public class RuteAdapter {
-
-
-
-
-
+public class SqlRuteAdapter implements RuterPort {
+        public SqlRuteAdapter(){};
         /** Henter en liste over alle tilgjengelige ruter fra databasen.
          *
          * Metoden har innebygd database tilkobling og kutting
@@ -25,8 +23,8 @@ public class RuteAdapter {
          *
          * @return sender en liste med rute objekter.
          * */
-
-    public static ArrayList<Rute> hentAlleRuter() {
+    @Override
+    public ArrayList<Rute> hentAlleRuter() {
         DBKey key = new DBKey();
         Database database = new Database (key);
         Connection connection = database.startDatabase();
