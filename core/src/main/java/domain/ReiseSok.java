@@ -69,8 +69,10 @@ public class ReiseSok {
                 }
             }
         }
-        for (Reise reise : reiser){
-            reise.printReise();
-        }
     }
+    public ArrayList<Reise> getReiser() {
+        return reiser;
+    }
+
+
 }
