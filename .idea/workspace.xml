@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e7f753a-8470-492c-b08b-18e7da05fee5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/domain/Rute.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/domain/Rute.java" afterDir="false" />
-    </list>
+    <list default="true" id="3e7f753a-8470-492c-b08b-18e7da05fee5" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,12 +27,12 @@
     &quot;assignee&quot;: &quot;P10NE3R&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/IceGqpple/SE-GR14.git",
-    "accountId": "8fdc7fb3-51be-4f30-8c78-b6b3a7aa200a"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/IceGqpple/SE-GR14.git&quot;,
+    &quot;accountId&quot;: &quot;8fdc7fb3-51be-4f30-8c78-b6b3a7aa200a&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/storage/src/main/java/runDB/Main.java" root0="FORCE_HIGHLIGHTING" />
   </component>
