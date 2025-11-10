@@ -27,6 +27,8 @@ public class TestDatabase {
         try (Statement statement = connection.createStatement()){
             statement.execute("CREATE TABLE stoppested (stoppested_id INT AUTO_INCREMENT PRIMARY KEY, " +
                     "sted_navn VARCHAR(20))");
+            statement.execute("CREATE TABLE rute (rute_id INT AUTO_INCREMENT PRIMARY KEY, rute_navn VARCHAR(45))");
+            statement.execute("CREATE TABLE rute_view (id INT AUTO_INCREMENT PRIMARY KEY,rute_navn VARCHAR(45), kjoretoy_navn VARCHAR(45), sted_navn VARCHAR(45))");
         }
     }
 
@@ -34,6 +36,19 @@ public class TestDatabase {
         try (Statement statement = connection.createStatement()){
             insertIntoStoppeSteder("Halden");
             insertIntoStoppeSteder("Sarpsborg");
+            insertIntoStoppeSteder("Moss");
+            insertIntoStoppeSteder("Fredrikstad");
+
+
+
+            insertIntoRute("Moss-Fredrikstad");
+            insertIntoRute("Sarpsborg-Halden");
+
+            insertIntoRuteView("Moss-Fredrikstad", "Buss", "Moss");
+            insertIntoRuteView("Moss-Fredrikstad", "Buss", "Fredrikstad");
+
+            insertIntoRuteView("Sarpsborg-Halden", "Tog", "Sarpsborg");
+            insertIntoRuteView("Sarpsborg-Halden", "Tog", "Halden");
         }
     }
 
@@ -44,6 +59,26 @@ public class TestDatabase {
             preparedStatement.executeUpdate();
         }
     }
+
+    public void insertIntoRute(String ruteNavn) throws Exception{
+        String sql = "INSERT INTO rute (rute_navn)" + "VALUES (?)";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)){
+            preparedStatement.setString(1, ruteNavn);
+            preparedStatement.executeUpdate();
+        }
+    }
+
+
+    public void insertIntoRuteView(String ruteNavn, String kjoretoyNavn, String stedNavn) throws Exception{
+        String sql = "INSERT INTO rute_view (rute_navn, kjoretoy_navn, sted_navn)" + "VALUES (?,?,?)";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)){
+            preparedStatement.setString(1, ruteNavn);
+            preparedStatement.setString(2, kjoretoyNavn);
+            preparedStatement.setString(3, stedNavn);
+            preparedStatement.executeUpdate();
+        }
+    }
+
 
 
 }

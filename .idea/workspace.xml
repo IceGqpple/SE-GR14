@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e7f753a-8470-492c-b08b-18e7da05fee5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/storage/src/main/java/exceptions/StoppeStedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/src/main/java/testAdapter/StoppeStedAdapterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/src/main/java/testDataBase/TestDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/src/main/java/adapter/SqlRuteAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/storage/src/main/java/adapter/SqlRuteAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/src/main/java/adapter/SqlStoppeStedAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/storage/src/main/java/adapter/SqlStoppeStedAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/src/main/java/runDB/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/storage/src/main/java/runDB/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/src/main/java/testAdapter/StoppeStedAdapterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/main/java/testAdapter/AdapterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/src/main/java/testDataBase/TestDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/main/java/testDataBase/TestDatabase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,28 +54,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.App.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StoppeStedAdapterTest (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StoppeStedAdapterTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StoppeStedAdapterTest.testHentAlleStoppeSteder (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StoppeStedAdapterTest.testHentAlleStoppeSteder.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StoppeStedAdapterTest.testRuteAdapter.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop__api__backend&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/47940/Desktop/SE Software Engineering/Github/SE-GR14/storage/src/main/java/runDB&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/47940/Desktop/SE Software Engineering/Github/SE-GR14/test/src/main/java/org/musicas/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "Application.Main.executor": "Run",
+    "JUnit.AdapterTest.executor": "Run",
+    "JUnit.StoppeStedAdapterTest (1).executor": "Run",
+    "JUnit.StoppeStedAdapterTest.executor": "Run",
+    "JUnit.StoppeStedAdapterTest.testHentAlleStoppeSteder (1).executor": "Run",
+    "JUnit.StoppeStedAdapterTest.testHentAlleStoppeSteder.executor": "Run",
+    "JUnit.StoppeStedAdapterTest.testRuteAdapter.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "develop__api__backend",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/47940/Desktop/SE Software Engineering/Github/SE-GR14/storage/src/main/java/runDB",
+    "onboarding.tips.debug.path": "C:/Users/47940/Desktop/SE Software Engineering/Github/SE-GR14/test/src/main/java/org/musicas/Main.java",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.import"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\47940\Desktop\SE Software Engineering\Github\SE-GR14\storage\src\main\java\runDB" />
@@ -95,7 +92,7 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.StoppeStedAdapterTest (1)">
-    <configuration name="StoppeStedAdapterTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AdapterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test" />
       <extension name="coverage">
         <pattern>
@@ -104,8 +101,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="testAdapter" />
-      <option name="MAIN_CLASS_NAME" value="testAdapter.StoppeStedAdapterTest" />
+      <option name="MAIN_CLASS_NAME" value="testAdapter.AdapterTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdapterTest.testHentAlleStoppeSteder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testAdapter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testAdapter" />
+      <option name="MAIN_CLASS_NAME" value="testAdapter.AdapterTest" />
+      <option name="METHOD_NAME" value="testHentAlleStoppeSteder" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -121,22 +134,6 @@
       <option name="PACKAGE_NAME" value="org.musicas" />
       <option name="MAIN_CLASS_NAME" value="org.testAdapter.StoppeStedAdapterTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StoppeStedAdapterTest.testHentAlleStoppeSteder (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testAdapter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="testAdapter" />
-      <option name="MAIN_CLASS_NAME" value="testAdapter.StoppeStedAdapterTest" />
-      <option name="METHOD_NAME" value="testHentAlleStoppeSteder" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

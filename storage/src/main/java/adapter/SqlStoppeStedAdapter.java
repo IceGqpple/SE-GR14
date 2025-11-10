@@ -96,3 +96,10 @@ public class SqlStoppeStedAdapter implements StoppeStedPort {
 
 
 }
+
+
+
+
+
+
+
