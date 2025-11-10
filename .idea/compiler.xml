@@ -11,6 +11,7 @@
         <module name="core" />
         <module name="frontend_api" />
         <module name="storage" />
+        <module name="test" />
       </profile>
     </annotationProcessing>
   </component>
