@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e7f753a-8470-492c-b08b-18e7da05fee5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/Service/RuteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/Service/StoppeStedService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/port/RuterPort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/port/StoppeStedPort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/domain/ReiseSok.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/domain/ReiseSok.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend_api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend_api/src/main/java/frontend_api/Frontend_Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_api/src/main/java/frontend_api/Frontend_Api.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/src/main/java/adapter/RuteAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/storage/src/main/java/adapter/SqlRuteAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/src/main/java/adapter/StoppeStedAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/storage/src/main/java/adapter/SqlStoppeStedAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/src/main/java/runDB/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/storage/src/main/java/runDB/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,8 +55,9 @@
     "Application.App.executor": "Run",
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "develop__api__backend",
+    "git-widget-placeholder": "develop__frontend",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/47940/Desktop/SE Software Engineering/Github/SE-GR14/storage/src/main/java/runDB",

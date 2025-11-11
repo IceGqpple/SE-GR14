@@ -8,7 +8,6 @@ import java.util.ArrayList;
 
 
 public class App {
-    public static ArrayList<Rute> ruteData = new MockData().getRuteList();
         public static void main(String[] args) {
             new Frontend_Api();
     }
