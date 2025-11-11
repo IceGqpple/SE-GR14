@@ -1,0 +1,40 @@
+@use 'sass:list';
+@use './variables' as *;
+
+//Gjenbrukbare mixins som brukes flere steder på siden :)
+
+@mixin transition($properties...) {
+  $joined: list.join($properties, ', ');
+  transition: #{$joined} $transition-duration ease;
+}
+
+@mixin card($border-color: $color-card-border, $background: $color-white) {
+  background: $background;
+  border-radius: $radius-lg;
+  border: 3px solid $border-color;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@mixin panel($background: $color-white, $border-color: $color-border) {
+  background: $background;
+  border-radius: $radius-lg;
+  border: 1px solid $border-color;
+  padding: 1.5rem;
+}
+
+@mixin flex-center($gap: 0.5rem) {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin responsive-container($padding: 2rem) {
+  flex: 1;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  width: 100%;
+  padding: $padding;
+}
