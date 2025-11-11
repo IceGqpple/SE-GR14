@@ -1,6 +1,7 @@
 package Service;
 
 import domain.StoppeSted;
+import exeption.RuteException;
 import port.StoppeStedPort;
 
 import java.util.ArrayList;
@@ -13,6 +14,11 @@ public class StoppeStedService {
     }
 
     public ArrayList<StoppeSted> hentStoppeSted(){
-        return stoppeStedData.hentAlleStoppeSteder();
+        try {
+            return stoppeStedData.hentAlleStoppeSteder();
+        }
+        catch (RuteException e){
+            throw new RuntimeException("kunne ikke hente stoppesteder" + e.getMessage());
+        }
     }
 }

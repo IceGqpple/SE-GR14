@@ -45,6 +45,7 @@ public class Reise {
 
     public int getAntallstop() {return antallstop;}
 
+    // hjelpe funksjon for å skrive ut reiser
     public void printReise(){
         System.out.print("Reise: " + stoppesteder.getFirst().getName() + " - " + stoppesteder.getLast().getName() + "\n");
         System.out.print("Ruter: ");

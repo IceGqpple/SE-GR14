@@ -61,6 +61,7 @@ public class Rute {
         return kjøretøy;
     }
 
+    // hjelpe funksjon for å skrive ut ruter
     public void printRute(){
         System.out.print("Rute: " + getName() + "\nStoppesteder: ");
         for(StoppeSted stop : stoppeSteder){
