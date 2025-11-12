@@ -1,6 +1,7 @@
 package Service;
 
 import domain.Rute;
+import exeption.RuteException;
 import port.RuterPort;
 
 import java.util.ArrayList;
@@ -13,7 +14,12 @@ public class RuteService {
     }
 
     public ArrayList<Rute> hentRuter(){
-        return ruterData.hentAlleRuter();
+        try{
+            return ruterData.hentAlleRuter();
+        }
+        catch (RuteException e){
+            throw new RuntimeException("Kunne ikke hente ruter" + e.getMessage());
+        }
     }
 
 }

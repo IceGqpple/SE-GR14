@@ -1,0 +1,443 @@
+@use './styles/variables' as *;
+@use './styles/mixins' as *;
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.shell {
+  @include responsive-container();
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+//Header
+.header {
+  background-color: $color-primary;
+  color: $color-white;
+  padding: 1rem 2rem;
+
+  .Header_inner {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .Logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    background-color: rgba($color-white, 0.1);
+    border-radius: $radius-md;
+  }
+
+  .header_actions {
+    @include flex-center(1rem);
+
+    .header_login {
+      @include flex-center(0.5rem);
+      font-size: 0.9rem;
+
+      .checkmark {
+        color: $color-success;
+        font-weight: bold;
+      }
+    }
+
+    .header_search_text {
+      font-size: 0.9rem;
+    }
+  }
+
+  .icon-btn {
+    background: none;
+    border: none;
+    color: $color-white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: $radius-sm;
+    @include transition(background-color);
+
+  }
+}
+
+//Search
+.search {
+  @include panel($color-white);
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: $color-heading;
+  }
+
+  .search_form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      &-wrapper {
+        position: relative;
+      }
+
+      label {
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: #374151;
+      }
+
+      input {
+        padding: 0.75rem;
+        border: 2px solid $color-border;
+        border-radius: $radius-md;
+        font-size: 1rem;
+        font-family: inherit;
+        @include transition(border-color);
+
+        &:focus {
+          outline: none;
+          border-color: $color-primary;
+        }
+      }
+    }
+
+    .swap-container {
+      display: flex;
+      justify-content: flex-end;
+      margin: -0.25rem 0;
+
+      .swap {
+        background: $color-swap-bg;
+        border: 2px solid $color-border;
+        border-radius: $radius-md;
+        padding: 0.5rem 0.75rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+        @include transition(background-color, border-color);
+        z-index: 1;
+
+        &:hover {
+          background: $color-swap-bg;
+          border-color: $color-swap-border;
+        }
+      }
+    }
+
+    .btn {
+      background-color: $color-primary;
+      color: $color-white;
+      padding: 0.75rem 1.5rem;
+      border-radius: $radius-md;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      @include transition(background-color);
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .error {
+    color: $color-error;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: $color-error-light;
+    border-radius: $radius-md;
+  }
+}
+
+//Favorittreiser
+.favorites {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid $color-border;
+
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: $color-heading;
+  }
+
+  .favorite-item {
+    @include flex-center(0.5rem);
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: $radius-md;
+    @include transition(background-color);
+
+    .star {
+      font-size: 1.2rem;
+
+      &.yellow {
+        color: $color-warning;
+      }
+
+      &.green {
+        color: $color-success;
+      }
+    }
+  }
+
+  .add-favorite {
+    @include flex-center(0.5rem);
+    padding: 0.5rem;
+    color: $color-info;
+    cursor: pointer;
+    border-radius: $radius-md;
+    @include transition(background-color);
+
+    &:hover {
+      background-color: $color-success-light;
+    }
+  }
+}
+
+.results {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid $color-border;
+
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: $color-heading;
+  }
+}
+
+//Reise
+.reise {
+  @include panel($color-panel);
+  padding: 1rem;
+  margin-bottom: 1rem;
+
+  &_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+
+    strong {
+      font-size: 1rem;
+      color: $color-heading;
+    }
+
+    span {
+      font-size: 0.875rem;
+      color: $color-muted;
+    }
+  }
+
+  &_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: item;
+
+    li {
+      margin-bottom: 0.75rem;
+      padding-left: 1rem;
+      position: relative;
+
+      &::before {
+        content: counter(item);
+        counter-increment: item;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: $color-primary;
+        color: $color-white;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &_legTitle {
+    font-weight: 600;
+    color: $color-heading;
+    margin-bottom: 0.25rem;
+
+    .reise_transport {
+      font-size: 0.875rem;
+      color: $color-primary;
+      font-weight: normal;
+      margin-left: 0.5rem;
+    }
+  }
+
+  &_stops {
+    font-size: 0.875rem;
+    color: $color-muted;
+    margin-top: 0.25rem;
+  }
+
+  &_overganger {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid $color-border;
+    font-size: 0.875rem;
+    color: $color-muted;
+  }
+}
+
+//Kort i midten
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.card {
+  @include card();
+  text-align: left;
+  cursor: pointer;
+  align-items: flex-start;
+  @include transition(background-color, border-color);
+
+  &_icon {
+    font-size: 1.5rem;
+    color: $color-secondary;
+    margin-bottom: 0.25rem;
+  }
+
+  &:hover {
+    background: #fff7ed;
+    border-color: $color-card-border-hover;
+  }
+
+  &_title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: $color-heading;
+  }
+
+  &_subtitle {
+    font-size: 0.9rem;
+    color: $color-muted;
+  }
+}
+
+//Nyhetsseksjonen
+.news-sidebar {
+  @include panel();
+
+  .news_title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: $color-heading;
+  }
+
+  .news_list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+  }
+
+  .news_item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: $color-panel;
+    border-radius: $radius-md;
+    border: 1px solid $color-border;
+
+    .news_image {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: $radius-md;
+      background: $color-border;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      flex-shrink: 0;
+    }
+
+    .news_content {
+      flex: 1;
+
+      .news_badge {
+        display: inline-block;
+        background: $color-badge-bg;
+        color: $color-white;
+        padding: 0.25rem 0.5rem;
+        border-radius: $radius-sm;
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .news_text {
+        font-size: 0.9rem;
+        color: $color-heading;
+      }
+    }
+  }
+
+  .news_all {
+    color: $color-primary;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-radius: $radius-sm;
+    @include transition(background-color);
+
+    &:hover {
+      background-color: $color-error-light;
+    }
+  }
+}
+
+//Og footer
+.footer {
+  border-top: 2px solid $color-border-strong;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  width: 100%;
+  background: $color-white;
+
+  &_left,
+  &_right {
+    font-size: 0.9rem;
+    color: $color-muted;
+    cursor: pointer;
+    @include transition(color);
+  }
+}

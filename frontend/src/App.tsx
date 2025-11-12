@@ -1,35 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Header from './components/Header';
+import Footer from './components/Footer';
+import NewsSidebar from './components/NewsSidebar';
+import Search from './components/Search';
+import CardLink from './components/CardLink';
+import './App.scss';
 
-function App() {
-  const [count, setCount] = useState(0)
 
+export default function App() {
+      /**Holder det enkelt med fragment og divs :) */
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <Header />
+      <div className="shell">
+        <main className="grid">
+          <section className="left">
+            <Search />
+          </section>
+
+          <section className="center">
+            <div className="card-grid">
+              <CardLink title="Se ruter" subtitle="Ruter for buss, tog & ferger" icon="→" />
+              <CardLink title="Driftsmeldinger" subtitle="Info om trasportsmidler & systemer" icon="⚠" />
+              <CardLink title="Billetter" subtitle="Typer billetter & priser" icon="🎟️" />
+              <CardLink title="Nyttig informasjon" subtitle="Les mer om oss!" icon="🛈" />
+            </div>
+          </section>
+
+          <section className="right">
+            <NewsSidebar />
+          </section>
+        </main>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Footer />
     </>
   )
 }
-
-export default App
