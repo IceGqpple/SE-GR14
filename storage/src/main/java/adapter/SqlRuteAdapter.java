@@ -93,45 +93,74 @@ public class SqlRuteAdapter implements RuterPort {
     }
 
 
-
-    //Denne funksjonen tar imot 2 stoppesteder som parametere for å hente ut rutenavn i en liste.
-    public ArrayList<String> ruteSok(StoppeSted start, StoppeSted slutt){
-        ArrayList<String> passendeRuter = new ArrayList<>();
-        try{
-            //Har bare laget en klasse for API nøkkelen og bruker denne til å opprette kontakt med databasen.
-            DBKey key = new DBKey();
-            Database database = new Database (key);
-            Connection connection = database.startDatabase();
-            Statement statement = connection.createStatement();
-
-            //Henter navnene til stoppested objektene. for å gi dem so parametere til spørringen
-            String st = start.getName();
-            String sl = slutt.getName();
-
-            //Lagret spørring til databasen som henter ut ruter som inneholder stoppestedene.
-            ResultSet r = statement.executeQuery(String.format("SELECT distinct\n" +
-                    " st.rute_navn\n" +
-                    " FROM rute_view as st\n" +
-                    " JOIN rute_view as sl ON st.rute_id = sl.rute_id\n" +
-                    " WHERE \n" +
-                    "\tst.sted_navn = '%s'\n" +
-                    "    AND sl.sted_navn = '%s'\n" +
-                    "    AND st.rekkefolge < sl.rekkefolge;"));
+    public ArrayList<Rute> hentAlleRuter(Connection connection) {
 
 
 
-            while(r.next()){
-                passendeRuter.add(r.getString(1));
+        Rute rute;
+        ArrayList<Rute> ruter = new ArrayList<>();
+        ArrayList<String> RuteNavnListe = new ArrayList<>();
+
+
+        //Funksjonen er satt opp slik i to try catch blokker. Den første blokken henter navnene på rutene blir hentet ut
+        try {
+            Statement DBSporring = connection.createStatement();
+            ResultSet RuteNavnFraDB = DBSporring.executeQuery("SELECT rute_navn from rute");
+
+            while (RuteNavnFraDB.next()) {
+                String RuteNavnTilListe = RuteNavnFraDB.getString(1);
+                RuteNavnListe.add(RuteNavnTilListe);
+
             }
-            database.quitDB();
+        } catch (SQLException e) {
 
-        } catch(SQLException e){
-
-            throw new DatabaseException("Problem with query" + e.getMessage());
+            throw new DatabaseException("Problem with first query" + e.getMessage());
         }
 
-        return passendeRuter;
+        //I den andre blokken brukes navnene på rutene til å hente ut å lage nye spørringer for å hente data til å konstruere rutene.
+        int i = 0;
+        while(i < RuteNavnListe.size()){
+            try {
+                Statement DBSporring = connection.createStatement();
+                String RuteNavnTilSporring = RuteNavnListe.get(i);
+                ArrayList<String> StedsNavnTilRute = new ArrayList<>();
+                Kjøretøy kjoretoy = null;
+
+                //Her så lages det en spørring for hver rute
+                ResultSet ResultatFraSporringView = DBSporring.executeQuery(String.format("SELECT rute_navn, kjoretoy_navn, sted_navn from rute_view where rute_navn = '%s' ", RuteNavnTilSporring));
+
+                while(ResultatFraSporringView.next()){
+
+                    //Her legges stoppestedene inn i en ArrayList som blir gitt som parameter til konstruktøren
+                    StedsNavnTilRute.add(ResultatFraSporringView.getString(3));
+
+                    //Her hentes kjøretøy typen
+                    if(kjoretoy == null){
+                        if("Buss".equals(ResultatFraSporringView.getString(2))){
+                            kjoretoy = new Buss("Buss");
+                        } else{
+                            kjoretoy = new Tog("Tog");
+                        }
+                    }
+
+                }
+                //Her blir den nye ruten konstruert og lagt inn i listen som blir returnert.
+                rute = new Rute(RuteNavnTilSporring, kjoretoy, StedsNavnTilRute);
+                ruter.add(rute);
+            } catch (SQLException e) {
+
+                throw new DatabaseException("Problem with second query" + e.getMessage());
+
+            }
+            i++;
+        }
+
+
+
+        return ruter;
     }
+
+
 
 
 

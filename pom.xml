@@ -13,6 +13,7 @@
         <module>app</module>
         <module>core</module>
         <module>frontend_api</module>
+        <module>test</module>
     </modules>
 
     <properties>

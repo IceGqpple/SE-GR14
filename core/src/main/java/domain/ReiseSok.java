@@ -1,7 +1,5 @@
 package domain;
 
-import Service.RuteService;
-
 import java.util.ArrayList;
 
 public class ReiseSok {
@@ -14,23 +12,17 @@ public class ReiseSok {
         this.stoppreise = stoppreise_input;
         reiser = new ArrayList<Reise>();
 
-        // Initialisering av variable for å hente inn ruteliste for rutesøk
-
-        //ArrayList<Rute> ruteList = new RuteService(new SqlRuteAdapter()).hentRuter();
-        //ArrayList<Rute> ruteList = new MockData().getRuteList();
-
-
         ArrayList<Rute> startReiseRute = new ArrayList<Rute>();
         ArrayList<Rute> stoppReiseRute = new ArrayList<Rute>();
 
-        // logikk for å finne alle ruter som ikke holder startpunkt for reisen
+        // logikk for å finne alle ruter som inneholder startpunkt på reisen.
         for (Rute rute : ruteList) {
             if(rute.finnStoppeSted(startreise.getName()) >= 0){
                 startReiseRute.add(rute);
             }
         }
 
-        // logikk for å finne og legge til reise som ikke krever overgang mellom ruter.
+        // logikk for å finne og legge til reiser som ikke krever overgang mellom ruter.
         for(Rute rute : startReiseRute){
             ArrayList<StoppeSted> temp = new ArrayList<StoppeSted>();
             if(rute.finnStoppeSted(stoppreise.getName()) > rute.finnStoppeSted(startreise.getName())){
@@ -41,13 +33,13 @@ public class ReiseSok {
             }
         }
         if(reiser.isEmpty()){
-            // logikk for å finne alle ruter som inneholder sluttpunkt for reisen.
+            // logikk for å finne alle ruter som inneholder sluttpunktet for reisen.
             for (Rute rute : ruteList) {
                 if(rute.finnStoppeSted(stoppreise.getName()) >= 0){
                     stoppReiseRute.add(rute);
                 }
             }
-            // logikk for å legge til reiser som en overgang mellom 2 ruter for å fullføre reisen.
+            // logikk for å legge til reiser som har en overgang mellom 2 ruter for å fullføre reisen.
             for(Rute startrute : startReiseRute){
                 for(Rute stopprute : stoppReiseRute){
                     for(StoppeSted stop : startrute.getStoppeSteder() ){
